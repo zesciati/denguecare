@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/trans">
+
+        <LinearLayout
+            android:id="@+id/linearkonsul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cornerdetail_consul"
+            android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                        <ImageView
+                            android:id="@+id/lah"
+                            android:layout_width="40dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/lah" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_toRightOf="@id/lah"
+                            android:text="Rian Hilmi\n\Hidayatullah"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:id="@+id/txtclose"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/circle"
+                            android:gravity="center"
+                            android:text="X"
+                            android:textColor="#ffffff" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="About me"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="30dp"
+                            android:text="Saya seorang dokter ahli demam berdarah yang berdedikasi untuk memberikan perawatan terbaik kepada pasien-pasien saya.\n\Dengan latar belakang pendidikan medis yang kuat dan pengalaman klinis yang luas, saya berkomitmen untuk memahami dan mengelola setiap kasus demam berdarah dengan teliti."
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Achievements"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="30dp"
+                            android:text="-  Pemimpin Tim Riset Klinis\n\-  Mengajar di lembaga-lembaga medis\n\-  Menerima penghargaan dari organisasi kesehatan\n\-  Terlibat aktif dalam organisasi kesehatan global"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp">
+
+                        <Button
+                            android:id="@+id/chatbutton1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/buttonback_dkonsul"
+                            android:clickable="true"
+                            android:onClick="chatbutton"
+                            android:text="Chat" />
+                </RelativeLayout>
+
+        </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,84 @@
+<resources>
+
+    <string name="infodbd">Informasi DBD</string>
+    <string name="P1">Apa itu demam berdarah?</string>
+    <string name="P2">Apa saja gejala \ndemam berdarah?</string>
+    <string name="P3">Bagaimana pencegahan \ndemam berdarah?</string>
+    <string name="P4">Bagaimana cara pengobatan \ndemam berdarah?</string>
+    <string name="P5">Bagaimana cara \nmendeteksi demam berdarah?</string>
+
+    <string name="prof">Profile</string>
+    <string name="leftarrow">Left Arrow</string>
+    <string name="cam">camera</string>
+    <string name="updateP">UPDATE PROFIL</string>
+    <string name="backend">Back</string>
+    <string name="leftArrow">Left Arrow</string>
+    <string name="nama">Nama Lengkap</string>
+    <string name="email">Email</string>
+    <string name="noPonsel">Nomor Ponsel</string>
+    <string name="editP">Edit Profile</string>
+
+    <string name="b1">kembali</string>
+    <string name="b2">Lihat</string>
+    <string name="b3">Lihat</string>
+    <string name="b4">Lihat</string>
+    <string name="b5">Lihat</string>
+    <string name="b6">Lihat</string>
+
+    <string name="bkembali1">kembali</string>
+
+    <string name="penjelasan1">Demam berdarah adalah penyakit yang disebabkan oleh virus Dengue yang ditularkan oleh nyamuk Aedes aegypti atau Aedes albopictus. Penyakit ini dapat menyebabkan demam tinggi, pendarahan, dan syok yang dapat berakibat fatal. Demam berdarah dapat dicegah dengan menghindari gigitan nyamuk, membersihkan lingkungan, dan melakukan vaksinasi. Demam berdarah dapat didiagnosis dengan tes darah dan diobati dengan cairan, obat, dan transfusi darah jika diperlukan. Demam berdarah adalah penyakit yang sering terjadi di daerah tropis dan subtropis, termasuk Indonesia.</string>
+
+    <string name="penjelasan2">Gejala demam berdarah adalah demam tinggi yang bisa mencapai 40°C atau lebih, yang sering terjadi setelah virus atau masa inkubasi virus. Anda harus mencegah demam berdarah dengan cepat, karena demam berdarah bisa menyebabkan perdarahan, nyeri, ruam, dan kaki dan tangan dingin. Gejala lain yang bisa muncul adalah sakit kepala, nyeri di bagian belakang mata, mual, muntah, dan pembengkakan kelenjar getah bening.</string>
+
+    <string name="penjelasan3">Pencegahan demam berdarah (DBD) melibatkan upaya-upaya untuk mengurangi penyebaran nyamuk Aedes aegypti, yang merupakan vektor penyakit ini. Langkah-langkah pencegahan mencakup pengendalian populasi nyamuk melalui penggunaan kelambu, penggunaan repelan serangga, penghapusan tempat-tempat berkembang biak nyamuk seperti genangan air, dan partisipasi aktif masyarakat dalam kampanye penghapusan sarang nyamuk. Selain itu, pemantauan kesehatan secara rutin, pemberian informasi edukatif kepada masyarakat, dan penanganan kasus DBD secara dini juga menjadi komponen penting dalam strategi pencegahan penyakit ini.</string>
+
+    <string name="penjelasan4">Pengobatan demam berdarah (DBD) melibatkan perawatan medis yang terfokus pada pemantauan ketat dan penanganan gejala. Pasien biasanya membutuhkan perawatan di rumah sakit, terutama pada tahap lanjut penyakit, untuk mendapatkan perawatan suportif seperti cairan intravena guna mencegah dehidrasi, serta transfusi darah jika diperlukan. Penting untuk memantau kadar trombosit dalam darah, karena penurunan drastis dapat menyebabkan komplikasi serius. Pemberian obat-obatan untuk meredakan demam dan nyeri juga dapat dilakukan. Dalam beberapa kasus, terapi plasma konvalesen atau transfusi trombosit dari donor yang sembuh dari DBD dapat dipertimbangkan. Pengobatan yang tepat waktu dan intensif dapat meningkatkan peluang kesembuhan pasien.</string>
+
+    <string name="penjelasan5">Deteksi demam berdarah (DBD) melibatkan serangkaian uji klinis dan laboratorium untuk mengidentifikasi adanya infeksi virus dengue. Diagnosis sering kali didasarkan pada gejala klinis karakteristik seperti demam tinggi, nyeri sendi dan otot, ruam kulit, serta tanda-tanda pendarahan. Pemeriksaan darah rutin dapat menunjukkan penurunan jumlah trombosit, yang merupakan ciri khas DBD. Uji serologi, seperti uji IgM dan IgG, dapat digunakan untuk mendeteksi antibodi terhadap virus dengue. Selain itu, teknik PCR (Polymerase Chain Reaction) dapat digunakan untuk mendeteksi secara langsung materi genetik virus dalam darah. Diagnosa dini dan akurat sangat penting untuk pengelolaan yang tepat dan perawatan intensif yang dapat meningkatkan prospek kesembuhan pasien dengan DBD.</string>
+
+    <string name="app_name">Testing</string>
+    <string name="login">Login</string>
+    <string name="belum_punya_akun_signup">Belum Punya Akun? Signup</string>
+
+    <string name="getStarted">Get Started</string>
+
+    <string name="copyright">by WoilahCik</string>
+
+    <string name="a">a</string>
+
+    <string name="q1">
+        Apakah ada mengalami demam dengan suhu lebih dari 39 derajat celcius?
+    </string>
+    <string name="q2">
+        Apakah Anda mengalami demam lebih dari dua hari?
+    </string>
+    <string name="q3">
+        Apakah Anda mengalami sakit kepala?
+    </string>
+    <string name="q4">
+        Apakah anda mengalami nyeri pada bagian sendi?
+    </string>
+    <string name="q5">
+        Apakah anda mengalami pendarahan pada bagian gusi atau hidung?
+    </string>
+    <string name="q6">
+        Apakah muncul bercak merah pada kulit anda?
+    </string>
+    <string name="q7">
+        Apakah Anda mengalami kulit terasa dingin dan lembab serta perasaan yang gelisah?
+    </string>
+    <string name="q8">
+        Apakah Anda mengalami syok berat dengan tekanan darah dan denyut nadi yang tidak beraturan?
+    </string>
+    <string name="hasil">
+        Berdasarkan jawaban dari form yang telah anda isi, diagnosis yang dihasilkan adalah: .
+    </string>
+    <string name="hasil2">
+        Anda diperkirakan terkena demam berdarah DENV-2.
+    </string>
+    <string name="catatan">
+        Catatan : Hasil deteksi ini hanya sebagai alat skrining awal. Untuk memastikan diagnosis, Anda harus melakukan pemeriksaan laboratorium, seperti tes NS1 atau tes antibodi dengue.
+    </string>
+
+</resources>

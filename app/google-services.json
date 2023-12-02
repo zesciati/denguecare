@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "960560562916",
+    "project_id": "testing-woilahcik",
+    "storage_bucket": "testing-woilahcik.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960560562916:android:664d2449a78de1c67b62f1",
+        "android_client_info": {
+          "package_name": "com.example.testing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZg2Ce-_rS4d2cpe7vt9PNWL8i2zC48kQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

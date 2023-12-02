@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "960560562916",
+    "firebase_url": "https://testing-woilahcik-default-rtdb.firebaseio.com",
+    "project_id": "testing-woilahcik",
+    "storage_bucket": "testing-woilahcik.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960560562916:android:664d2449a78de1c67b62f1",
+        "android_client_info": {
+          "package_name": "com.example.testing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960560562916-fjn561dd4v7o8ltifkdleefjejkbrik7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZg2Ce-_rS4d2cpe7vt9PNWL8i2zC48kQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960560562916-fjn561dd4v7o8ltifkdleefjejkbrik7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

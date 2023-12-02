@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BerandaActivity"
+    android:background="#164863">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+
+            <ImageView
+                android:id="@+id/dokter"
+                android:layout_width="190dp"
+                android:layout_height="170dp"
+                android:src="@drawable/dokter" />
+
+            <TextView
+                android:id="@+id/teksDg"
+                android:layout_toRightOf="@id/dokter"
+                android:layout_marginTop="60dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dengue Care"
+                android:textStyle="bold"
+                android:textColor="#ffffff"/>
+            <TextView
+                android:text="your personal care\n\for dengue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:layout_toRightOf="@id/dokter"
+                android:layout_below="@id/teksDg"
+                android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/profilAtas"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:contentDescription="a"
+                android:onClick="fprofile"
+                android:src="@drawable/profile" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/profilAtas"
+                android:text="Welcome, Rian"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:elevation="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:elevation="10dp"
+                android:background="@drawable/border1">
+                <ImageView
+                    android:id="@+id/pertama1"
+                    android:layout_width="150dp"
+                    android:layout_height="160dp"
+                    android:src="@drawable/orng_sakit"
+                    android:layout_marginLeft="3dp"
+                    android:layout_alignParentBottom="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="Pada tahun 2022, ada sekitar\n\131.265 kasus DBD di\n\Indonesia, dan dari semua\n\kasus tersebut, demam\n\berdarah menyebabkan\n\1.183 kematian."
+                    android:layout_toRightOf="@+id/pertama1"
+                    android:layout_marginTop="45dp"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:elevation="50dp"
+                android:text="What Are You Looking For?"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="330dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginLeft="20dp"
+                app:cardCornerRadius="30dp"
+                app:cardBackgroundColor="#162D39"
+                app:cardElevation="10dp"
+                app:contentPadding="5dp"
+                android:id="@+id/lKiri"
+                android:layout_width="185dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_alignParentTop="true"
+                    android:contentDescription="a"
+                    android:src="@drawable/diagnosis"
+                    android:onClick="fDiagnosis"/>
+
+                <TextView
+                    android:id="@+id/btndiagnosis"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="190dp"
+                    android:background="@drawable/button_warna"
+                    android:text="Ketahui\n\Gejala Penyakitmu"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:onClick="fDiagnosis"/>
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                app:cardBackgroundColor="#427D9D"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/lKanan1"
+                android:layout_marginTop="10dp"
+                android:layout_width="170dp"
+                android:layout_height="160dp"
+                android:layout_toRightOf="@id/lKiri"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/gambar2"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="165dp"
+                    android:padding="1dp"
+                    android:contentDescription="a"
+                    android:layout_height="100dp"
+                    android:src="@drawable/gambar2"
+                    android:onClick="fInfo"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gambar2"
+                    android:layout_marginLeft="37dp"
+                    android:layout_marginTop="110dp"
+                    android:text="Informasi\n\Mengenai DBD"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:onClick="fInfo"/>
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="#4D94A0"
+                android:layout_width="170dp"
+                android:layout_height="140dp"
+                android:layout_toRightOf="@+id/lKiri"
+                android:layout_below="@+id/lKanan1"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/cardfitur3"
+                    android:layout_width="170dp"
+                    android:layout_height="77dp"
+                    android:layout_alignParentBottom="true"
+                    android:clickable="true"
+                    android:contentDescription="Image for consulting doctors"
+                    android:src="@drawable/doctor"
+                    android:onClick="fKonsul"/>
+
+                <TextView
+                    android:id="@+id/btnkonsulahli"
+                    android:layout_width="157dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="90dp"
+                    android:background="@drawable/button_warna"
+                    android:clickable="true"
+                    android:text="Konsultasi\n\Dengan Para Ahli"
+                    android:onClick="fKonsul"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

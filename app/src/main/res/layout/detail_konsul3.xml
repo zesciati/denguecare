@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/cornerdetail_consul">
+
+    <LinearLayout
+        android:id="@+id/linearkonsul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+            <ImageView
+                android:id="@+id/lah"
+                android:src="@drawable/lah5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Michael\n\Ahmad Dahlan"
+                android:layout_toRightOf="@id/lah"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp"
+                android:textColor="#ffffff"/>
+            <TextView
+                android:id="@+id/txtclose"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:text="X"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/circle"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About me"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:contentDescription="a"
+                android:textColor="@color/white"
+                android:text="Saya seorang dokter ahli demam berdarah yang berdedikasi untuk memberikan perawatan terbaik kepada pasien-pasien saya.\nDengan latar belakang pendidikan medis yang kuat dan pengalaman klinis yang luas, saya berkomitmen untuk memahami dan mengelola setiap kasus demam berdarah dengan teliti." />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Achievements"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:text="•  Pemimpin Tim Riset Klinis\n•  Mengajar di lembaga-lembaga medis\n•  Menerima penghargaan dari organisasi kesehatan\n•  Terlibat aktif dalam organisasi kesehatan global"
+                android:contentDescription="a" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="88dp">
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/buttonback_dkonsul"
+                android:text="Chat" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

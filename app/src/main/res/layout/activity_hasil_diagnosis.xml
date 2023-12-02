@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Diagnosis"
+    android:layout_marginLeft="-3dp">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/bKembali"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/back"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="4dp"
+            android:padding="12dp"
+            android:onClick="kembaliHD"
+            android:contentDescription="back"/>
+
+        <TextView
+            android:id="@+id/Diagnosis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:gravity="center"
+            android:text="Hasil Diagnosis"
+            android:textSize="24sp"
+            android:textStyle="normal|bold"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hasil"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:justificationMode="inter_word"
+        android:text="@string/hasil"/>
+
+    <LinearLayout
+        android:id="@+id/diagnosis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hasil"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/diagnosis2"
+            android:gravity="center"
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:text="@string/hasil2"
+            android:textSize="20sp"
+            android:textStyle="normal|bold"
+            android:textAlignment="center"
+            android:layout_marginLeft="25dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/catatan"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/diagnosis"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:textStyle="normal|bold"
+        android:justificationMode="inter_word"
+        android:text="@string/catatan"/>
+
+    <LinearLayout
+        android:id="@+id/tindakan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/catatan"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:gravity="center"
+            android:text="Rekomedasi Tindakan"
+            android:textSize="19sp"
+            android:textStyle="normal|bold"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:textSize="17sp"
+            android:textStyle="normal|bold"
+            android:justificationMode="inter_word"
+            android:text="-->  Melakukan pengobatan di rumah dengan beristirahat yang cukup, banyak minum, dan mengonsumsi obat penurun panas."/>
+
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:textSize="17sp"
+            android:textStyle="normal|bold"
+            android:justificationMode="inter_word"
+            android:text="-->  Kunjungi klinik atau rumah sakit terdekat untuk mendapatkan perawatan lebih lanjut."/>
+    </LinearLayout>
+
+    <Button
+        android:layout_below="@id/tindakan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="#DDF2FD"
+        android:text="Kembali ke Beranda"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="normal|bold"
+        android:onClick="fKeMain"/>
+
+</RelativeLayout>
