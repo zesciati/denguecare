@@ -31,10 +31,11 @@ class Register : AppCompatActivity() {
             val signupNoHp = binding.noHp.text.toString()
             val signupUsername = binding.Username.text.toString()
             val signupPassword = binding.Password.text.toString()
-            val signupConfirmpassword = binding.ConfirmPassword.text.toString()
+//            val signupConfirmpassword = binding.ConfirmPassword.text.toString()
+            val dataImage = ""
 
-            if (signupFullname.isNotEmpty() && signupEmail.isNotEmpty() && signupNoHp.isNotEmpty() && signupUsername.isNotEmpty() && signupPassword.isNotEmpty() && signupConfirmpassword.isNotEmpty()){
-                signupUser(signupFullname,signupEmail,signupNoHp,signupUsername,signupPassword,signupConfirmpassword)
+            if (signupFullname.isNotEmpty() && signupEmail.isNotEmpty() && signupNoHp.isNotEmpty() && signupUsername.isNotEmpty() && signupPassword.isNotEmpty() ){
+                signupUser(signupFullname,signupEmail,signupNoHp,signupUsername,signupPassword,dataImage)
             } else{
                 Toast.makeText(this@Register,"All fields are mandatory",Toast.LENGTH_SHORT).show()
 
@@ -42,12 +43,12 @@ class Register : AppCompatActivity() {
         }
     }
 
-    private fun signupUser(fullname: String,username: String,password: String,email: String,noHp: String,confirmpassword: String){
+    private fun signupUser(fullname: String,username: String,password: String,email: String,noHp: String,dataImage: String){
         databaseReference.orderByChild("username").equalTo(username).addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if(!dataSnapshot.exists()){
                     val id = databaseReference.push().key
-                    val userData = UserData(id,fullname,email,noHp,username,password,confirmpassword)
+                    val userData = UserData(id,fullname,email,noHp,username,password,dataImage )
                     databaseReference.child(id!!).setValue(userData)
                     Toast.makeText(this@Register,"Sucessful Register",Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this@Register, Login::class.java))

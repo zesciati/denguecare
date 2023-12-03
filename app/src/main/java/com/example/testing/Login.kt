@@ -31,6 +31,8 @@ class Login : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var databaseReference: DatabaseReference
+    private lateinit var sessionManager: SessionManager
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +43,7 @@ class Login : AppCompatActivity() {
         databaseReference = firebaseDatabase.reference.child("users")
 
         auth = FirebaseAuth.getInstance();
+         sessionManager = SessionManager(this)
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken("960560562916-fjn561dd4v7o8ltifkdleefjejkbrik7.apps.googleusercontent.com")
@@ -90,6 +93,9 @@ class Login : AppCompatActivity() {
 
         if (account != null){
 
+            val email = account.email
+            signupUser("","","",email.toString(),"","")
+
             val credential = GoogleAuthProvider.getCredential(account.idToken,null)
             auth.signInWithCredential(credential).addOnCompleteListener {
 
@@ -115,6 +121,31 @@ class Login : AppCompatActivity() {
         startActivity(intentKeRegister)
     }
 
+    private fun signupUser(fullname: String,username: String,password: String,email: String,noHp: String,confirmpassword: String){
+        databaseReference.orderByChild("email").equalTo(email).addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                if(!dataSnapshot.exists()){
+                    val id = databaseReference.push().key
+                    val userData = UserData(id,fullname,email,noHp,username,password,confirmpassword)
+                    databaseReference.child(id!!).setValue(userData)
+                    sessionManager.saveLoginSession(true, email)
+//                    Toast.makeText(this@Register,"Sucessful Register",Toast.LENGTH_SHORT).show()
+//                    startActivity(Intent(this@Register, Login::class.java))
+//                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+//                    finish()
+                }
+//                else {
+//                    Toast.makeText(this@Register,"Users already exists",Toast.LENGTH_SHORT).show()
+//
+//                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+//                Toast.makeText(this@Register,"Database Error: ${databaseError.message}",Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+
     private fun loginUser(username:String,password:String){
         databaseReference.orderByChild("username").equalTo(username).addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -124,6 +155,7 @@ class Login : AppCompatActivity() {
 
                         if (userData != null && userData.password == password) {
                             Toast.makeText(this@Login, "Login successful", Toast.LENGTH_SHORT).show()
+                            sessionManager.saveLoginSession(false, username)
 
                             // Pastikan bahwa intent dan start activity dijalankan di thread UI
                             runOnUiThread {

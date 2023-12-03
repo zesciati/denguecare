@@ -1,5 +1,7 @@
 package com.example.testing
 
+import android.media.Image
+
 data class UserData(
     val id: String? = null,
     val fullname: String? = null,
@@ -7,5 +9,6 @@ data class UserData(
     val password: String? = null,
     val email: String? = null,
     val noHp: String? = null,
-    val confirmpassword: String? = null
+
+    val image: String? = null
 )
