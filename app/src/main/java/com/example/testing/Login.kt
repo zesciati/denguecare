@@ -94,7 +94,7 @@ class Login : AppCompatActivity() {
         if (account != null){
 
             val email = account.email
-            signupUser("","","",email.toString(),"","")
+            loginBySSO("","","",email.toString(),"","")
 
             val credential = GoogleAuthProvider.getCredential(account.idToken,null)
             auth.signInWithCredential(credential).addOnCompleteListener {
@@ -121,27 +121,20 @@ class Login : AppCompatActivity() {
         startActivity(intentKeRegister)
     }
 
-    private fun signupUser(fullname: String,username: String,password: String,email: String,noHp: String,confirmpassword: String){
+    private fun loginBySSO(fullname: String,username: String,password: String,email: String,noHp: String,confirmpassword: String){
         databaseReference.orderByChild("email").equalTo(email).addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                if(!dataSnapshot.exists()){
+                if (!dataSnapshot.exists()) {
                     val id = databaseReference.push().key
-                    val userData = UserData(id,fullname,email,noHp,username,password,confirmpassword)
+                    val userData =
+                        UserData(id, fullname, email, noHp, username, password, confirmpassword)
                     databaseReference.child(id!!).setValue(userData)
                     sessionManager.saveLoginSession(true, email)
-//                    Toast.makeText(this@Register,"Sucessful Register",Toast.LENGTH_SHORT).show()
-//                    startActivity(Intent(this@Register, Login::class.java))
-//                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
-//                    finish()
-                }
-//                else {
-//                    Toast.makeText(this@Register,"Users already exists",Toast.LENGTH_SHORT).show()
-//
-//                }
-            }
 
+                }
+            }
             override fun onCancelled(databaseError: DatabaseError) {
-//                Toast.makeText(this@Register,"Database Error: ${databaseError.message}",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@Login,"Database Error: ${databaseError.message}",Toast.LENGTH_SHORT).show()
             }
         })
     }

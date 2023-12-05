@@ -1,14 +1,18 @@
 package com.example.testing
 
 import android.media.Image
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class UserData(
-    val id: String? = null,
-    val fullname: String? = null,
-    val username: String? = null,
-    val password: String? = null,
-    val email: String? = null,
-    val noHp: String? = null,
+    var id: String? = null,
+    var fullname: String? = null,
+    var username: String? = null,
+    var password: String? = null,
+    var email: String? = null,
+    var noHp: String? = null,
 
-    val image: String? = null
-)
+    var image: String? = null
+): Parcelable
+
